@@ -1,18 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int n,lar,q,r;
+    int n,l,q,r;
     scanf("%d",&n);
     q=n;
-    lar=n%10;
-    while(q!=0)
+    l=n%10;
+    while(q)
     {
         r=q%10;
-        if(r>lar)
+        if(l<r)
         {
-            lar=r;
+            l=r;
         }
         q=q/10;
     }
-    printf("%d",lar);
+    printf("%d",l);
 }
