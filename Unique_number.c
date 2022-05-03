@@ -1,27 +1,27 @@
-#include<stdio.h>  
-  
-int main()  
-{  
-    int a[10] = {0}, num, rem;  
-    
-    scanf("%d", &num);  
-  
-    while(num)  
-    {  
-        rem = num % 10;  
-  
-        if(a[rem] == 1)  
-            break;  
-        else  
-            a[rem] = 1;  
-  
-        num = num / 10;  
-    }  
-  
-    if(num)  
-        printf("Not Unique Number");  
-    else  
-        printf("Unique Number");  
-  
-    return 0;  
-}  
+#include<stdio.h>
+int main()
+{
+    int a[10]={10},n,r;
+    scanf("%d",&n);
+    while(n)
+    {
+        r=n%10;
+        if(a[r]==1)
+        {
+            break;
+        }
+        else
+        {
+            a[r]=1;
+        }
+        n=n/10;
+    }
+    if(n)
+    {
+        printf("Not Unique Number");
+    }
+    else
+    {
+        printf("Unique Number");
+    }
+}
