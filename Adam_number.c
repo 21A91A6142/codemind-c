@@ -1,31 +1,29 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-	int n,q,k,res=0,x,t,y,z=0,r;
-	scanf("%d",&n);
-	k=n;
-	q=n*n;
-	while(k)
-	{
-		r=k%10;
-		res=res*10+r;
-		k=k/10;
-	}
-	x=res*res;
-	t=x;
-	while(t)
-	{
-		y=t%10;
-		z=z*10+y;
-		t=t/10;
-	}
-	if(z==q)
-	{
-		printf("True");
-	}
-	else
-	{
-		printf("False");
-	}
-	
+    int n,r,num,k,sum=0,sum1=0,rem;
+    scanf("%d",&n);
+    num=pow(n,2);
+    while(n)
+    {
+        r=n%10;
+        sum=sum*10+r;
+        n=n/10;
+    }
+    k=pow(sum,2);
+    while(k)
+    {
+        rem=k%10;
+        sum1=sum1*10+rem;
+        k=k/10;
+    }
+    if(sum1==num)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
 }
