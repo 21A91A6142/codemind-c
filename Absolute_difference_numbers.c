@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n,c,s=0,q,r,l,u,q1,s1=0,r1,k,i,m;
+	scanf("%d",&n);
+	scanf("%d",&k);
+	q=n;
+	while(q)
+	{
+		r=q%10;
+		s=s*10+r;
+		q=q/10;
+	}
+	q1=s;
+	for(i=0;i<k;i++)
+	{
+		r1=q1%10;
+		s1=s1*10+r1;
+		q1=q1/10;
+	}
+	c=n%(int)pow(10,k);
+	if(c>s1)
+	{
+		m=c-s1;
+		printf("%d",m);
+	}
+	else
+	{
+		m=s1-c;
+		printf("%d",m);
+	}
+}
