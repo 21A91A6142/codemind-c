@@ -1,9 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int x,y;
+    int x,y,t;
     scanf("%d%d",&x,&y);
-    if(x%2==0 && (x>0 || y%2==0))
+    t=x*1+y*2;
+    if(x==0 && y%2==0)
+    {
+        printf("YES");
+    }
+    else if(x==0 && y%2!=0)
+    {
+        printf("NO");
+    }
+    else if(t%2==0)
     {
         printf("YES");
     }
