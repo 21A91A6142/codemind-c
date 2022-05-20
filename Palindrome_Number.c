@@ -1,31 +1,29 @@
 #include<stdio.h>
 int main()
 {
-    int a[100],i,n,sum,q,r,j;
+    int i,n,a,r,temp;
     scanf("%d",&n);
-    for(i=0;i<n;i++)
+    for(i=1;i<n+1;i++)
     {
-        scanf("%d",&a[i]);
-    }
-    for(i=0;i<n;i++)
-    {
-        q=a[i];
-        sum=0;
-        while(q!=0)
+        int s=0;
+        scanf("%d",&a);
+        temp=a;
+        while(a!=0)
         {
-            r=q%10;
-            sum=sum*10+r;
-            q=q/10;
+            r=a%10;
+            s=s*10+r;
+            a=a/10;
         }
-        if(sum==a[i])
+        if(s==temp)
         {
-            printf("True");
+            printf("True
+");
         }
         else
         {
-            printf("False");
-        }
-        printf("
+            printf("False
 ");
+        }
+        s=0;
     }
 }
