@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main()
+{
+    int a[100],n,c=0,s=0,i,f=0,k=0,j;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==1)
+        {
+        	k=0;
+		}
+		else
+		{
+			for(j=2;j<=a[i]/2;j++)
+			{
+				f=0;
+				if(a[i]%j==0)
+				{
+					f=1;
+					break;
+				}
+			}
+			if(f==0)
+			{
+				s=s+a[i];
+				c=c+1;
+			}
+		}
+    }
+    printf("%.2f",(float)s/c);
+}
