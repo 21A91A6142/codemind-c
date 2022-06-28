@@ -23,7 +23,7 @@ int main()
             break;
         }
     }
-    if(c==1)
+    if(c>0)
     {
         printf("Not Ugly Number");
     }
